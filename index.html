@@ -459,25 +459,27 @@
 
         /* PROJECT IMAGE CSS: This controls the size, background, alignment, and text size of the visual/emoji area inside each project card. If you replace the emoji with an actual <img>, this is one of the areas you may need to adjust later. */
         .project-image {
-            height: 180px;
+    height: 180px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #191919,
-                    #080808
-                );
+    background: linear-gradient(
+        135deg,
+        #191919,
+        #080808
+    );
 
-            display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            justify-content: center;
+    overflow: hidden;
+}
 
-            align-items: center;
-
-            color: var(--red);
-
-            font-size: 45px;
-        }
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
         .project-content {
             padding: 20px;
@@ -1238,7 +1240,7 @@
 
                                         <!-- PROJECT IMAGE / VISUAL: This is currently an emoji placeholder. THIS IS ONE OF THE MAIN AREAS YOU MAY CHANGE. You can replace the emoji with a real project screenshot, image, or other visual later. -->
                     <div class="project-image">
-                        ☕
+                        <img src="Project-images/Cafe-image.png" alt="Coffee Café Website">
                     </div>
 
                     <div class="project-content">
@@ -1269,11 +1271,67 @@
                                 CSS
                             </a>
 
-                            <a href="https://github.com/yourusername/coffee-cafe/blob/main/script.js"
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="#"
+                               class="project-button github">
+
+                                GitHub
+
+                            </a>
+
+                            <a href="#"
+                               class="project-button">
+
+                                Live Demo
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                                        <!-- PROJECT IMAGE / VISUAL: This is currently a code-symbol placeholder. You can replace it with your own portfolio screenshot, image, or other visual later. -->
+                    <div class="project-image">
+                        <img src="Project-images/Portfolio-image.png" alt="Portfolio Website">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Portfolio Website
+                        </h3>
+
+                        <p>
+                            A personal developer portfolio
+                            created to showcase my projects,
+                            experience, and skills.
+                        </p>
+
+                        <div class="tags">
+
+                            <a href="https://github.com/yourusername/portfolio/blob/main/index.html"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="tag">
-                                JavaScript
+                                HTML
+                            </a>
+
+                            <a href="https://github.com/yourusername/portfolio/blob/main/style.css"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="tag">
+                                CSS
                             </a>
 
                         </div>
@@ -1302,7 +1360,8 @@
 
 
 
-                <!-- PROJECT 2 -->
+
+                <!-- PROJECT 3 -->
 
                 <article class="project-card">
 
@@ -1370,77 +1429,6 @@
 
                 </article>
 
-
-
-                <!-- PROJECT 3 -->
-
-                <article class="project-card">
-
-                                        <!-- PROJECT IMAGE / VISUAL: This is currently a code-symbol placeholder. You can replace it with your own portfolio screenshot, image, or other visual later. -->
-                    <div class="project-image">
-                        &lt;/&gt;
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            Portfolio Website
-                        </h3>
-
-                        <p>
-                            A personal developer portfolio
-                            created to showcase my projects,
-                            experience, and skills.
-                        </p>
-
-                        <div class="tags">
-
-                            <a href="https://github.com/yourusername/portfolio/blob/main/index.html"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tag">
-                                HTML
-                            </a>
-
-                            <a href="https://github.com/yourusername/portfolio/blob/main/style.css"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tag">
-                                CSS
-                            </a>
-
-                            <a href="https://github.com/yourusername/portfolio/blob/main/script.js"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tag">
-                                JavaScript
-                            </a>
-
-                        </div>
-
-                        <div class="project-buttons">
-
-                            <a href="#"
-                               class="project-button github">
-
-                                GitHub
-
-                            </a>
-
-                            <a href="#"
-                               class="project-button">
-
-                                Live Demo
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
             </div>
 
         </section>
@@ -1472,8 +1460,8 @@
                     </h3>
 
                     <p>
-                        I'm Durante Thornton, a front-end developer
-                        passionate about building websites that look
+                        I'm Durante Thorton, a Software developer
+                        passionate about building applications that look
                         good, work well, and provide a great user
                         experience.
                     </p>
