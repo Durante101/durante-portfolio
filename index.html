@@ -752,7 +752,7 @@
            CERTIFICATIONS
         ========================= */
 
-        .certifications {
+       .certifications {
             display: grid;
 
             grid-template-columns:
@@ -760,6 +760,13 @@
 
             gap: 20px;
         }
+
+
+        /* CERTIFICATION CARD:
+           Controls the overall box for each certification.
+           
+           The certificate image will be on the left,
+           and the certification information will be on the right. */
 
         .cert-card {
             background: var(--card);
@@ -775,12 +782,32 @@
             align-items: center;
 
             gap: 20px;
+
+            transition: 0.3s;
         }
 
-        /* CERTIFICATION ICON CSS: This controls the box around the current checkmark/icon. If you replace it with a certification badge image, this area may need to be adjusted. */
-        .cert-icon {
-            width: 55px;
-            height: 55px;
+
+        /* CERTIFICATION CARD HOVER:
+           Makes the border red when someone moves
+           their mouse over the certification. */
+
+        .cert-card:hover {
+            border-color: var(--red);
+        }
+
+
+        /* CERTIFICATE IMAGE:
+           THIS IS THE MAIN AREA YOU WILL CHANGE.
+           
+           This creates the space where your actual
+           certificate picture will appear. */
+
+        .cert-image {
+            width: 180px;
+
+            height: 120px;
+
+            flex-shrink: 0;
 
             display: flex;
 
@@ -788,23 +815,51 @@
 
             align-items: center;
 
-            background: rgba(217, 4, 41, 0.15);
+            background: #0d0d0d;
 
-            color: var(--red-light);
+            border: 1px solid var(--border);
 
             border-radius: 10px;
 
-            font-size: 25px;
+            overflow: hidden;
         }
+
+
+        /* ACTUAL CERTIFICATE PICTURE:
+           This makes your certificate fit inside
+           the image area without stretching it. */
+
+        .cert-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
 
         .cert-card h3 {
             margin-bottom: 3px;
         }
 
+
         .cert-card p {
             color: var(--gray);
 
             font-size: 14px;
+        }
+
+
+        /* CERTIFICATION DESCRIPTION:
+           Gives you a little more room for explaining
+           what the certification represents. */
+
+        .cert-description {
+            margin-top: 10px;
+
+            line-height: 1.5;
         }
 
 
@@ -1466,7 +1521,7 @@
                 <div class="experience-card">
 
                     <h3>
-                        DevOps / QA Intern
+                      DevOps Engineer intern  
                     </h3>
 
                     <div class="experience-company">
@@ -1474,14 +1529,16 @@
                     </div>
 
                     <div class="experience-date">
-                        2025 – 2026
+                        Aug. 2025 – Jan. 2026
                     </div>
 
                     <p>
-                        Worked within a professional technology
-                        environment while gaining experience with
-                        testing, development tools, APIs, automation,
-                        and cloud-related technologies.
+                        Collaborated within an Agile team to support development and deployment of application components using modern tools and workflows.
+                        Contributed to building and maintaining CI/CD pipelines, gaining experience in how applications move from development to production.
+                        Used Git for version control, managing code changes and collaborating on shared repositories.
+                        Wrote and tested scripts to automate tasks, improving efficiency and understanding of system processes.
+                        Participated in technical discussions, and backlog tracking using Azure DevOps.
+
                     </p>
 
                 </div>
@@ -1490,24 +1547,44 @@
                 <div class="experience-card">
 
                     <h3>
-                        Front-End Development
+                        Technical Project Coordinator & QA Analyst
                     </h3>
 
                     <div class="experience-company">
-                        Computer Coach
+                        MODERNIZED MOBILE
                     </div>
 
                     <div class="experience-date">
-                        2026
+                        Jul. 2026 – Present
                     </div>
 
                     <p>
-                        Developed front-end skills through hands-on
-                        projects using HTML, CSS, JavaScript, and
-                        responsive web design.
+                        Performed QA testing by executing test scenarios, documenting defects, and identifying functional and UI/UX improvements.
+                        Coordinated with clients and the development team to gather requirements, discuss priorities, and communicate project progress and milestones.
                     </p>
 
                 </div>
+
+                <div class="experience-card">
+
+                    <h3>
+                        Assistant Manager
+                    </h3>
+
+                    <div class="experience-company">
+                        LIDS
+                    </div>
+
+                    <div class="experience-date">
+                        Sept. 2024 – Dec. 2025
+                    </div>
+
+                    <p>
+                        Trained and supported team members, strengthening communication and collaboration skills in a fast-paced environment and managing inventory and operations with attention to detail and accuracy.
+                    </p>
+
+                </div>
+
 
             </div>
 
@@ -1536,7 +1613,7 @@
                 <div class="education-card">
 
                     <h3>
-                        Front-End Web Development
+                        Front-End Development Bootcamp
                     </h3>
 
                     <div class="education-school">
@@ -1544,13 +1621,12 @@
                     </div>
 
                     <div class="education-date">
-                        2026
+                        May 2026 – Jul. 2026
                     </div>
 
                     <p>
-                        Hands-on training focused on HTML, CSS,
-                        JavaScript, responsive web design, and
-                        building front-end projects.
+                        Completed hands-on front-end development training covering HTML, CSS, JavaScript, React, Git, and WordPress.
+                        Practiced web design principles, UI design, responsive layouts, and website content development through hands-on projects.
                     </p>
 
                 </div>
@@ -1566,13 +1642,14 @@
                     </div>
 
                     <div class="education-date">
-                        Completed
+                        Mar. 2025 – Jan. 2026
                     </div>
 
                     <p>
-                        Technical training that included programming,
-                        databases, Git, Java, Python, SQL, and
-                        application development.
+                        Completed intensive technical training in programming fundamentals, software development concepts, 
+                        database basics (including SQL), software testing, problem-solving techniques, IDE debugging, and 
+                        application development methodologies while also building professional and career readiness skills, 
+                        preparing for real-world development
                     </p>
 
                 </div>
@@ -1604,25 +1681,17 @@
                 <div class="skill-card">
 
                     <h3>
-                        Front-End
+                        Languages & Skills
                     </h3>
 
                     <div class="skill-list">
 
                         <span class="skill">
-                            HTML5
+                            HTML
                         </span>
 
                         <span class="skill">
-                            CSS3
-                        </span>
-
-                        <span class="skill">
-                            JavaScript
-                        </span>
-
-                        <span class="skill">
-                            Responsive Design
+                            CSS
                         </span>
 
                         <span class="skill">
@@ -1654,10 +1723,6 @@
                             VS Code
                         </span>
 
-                        <span class="skill">
-                            Chrome DevTools
-                        </span>
-
                     </div>
 
                 </div>
@@ -1683,9 +1748,6 @@
                             Advanced CSS
                         </span>
 
-                        <span class="skill">
-                            Web Accessibility
-                        </span>
 
                     </div>
 
@@ -1701,7 +1763,10 @@
              CERTIFICATIONS
         ========================= -->
 
-        <!-- CERTIFICATIONS SECTION: Everything inside this section controls the certifications shown on the portfolio. -->
+        <!-- CERTIFICATIONS SECTION:
+             Everything inside this section controls
+             the certifications shown on the portfolio. -->
+
         <section id="certifications" class="section">
 
             <div class="section-title">
@@ -1716,12 +1781,33 @@
             <div class="certifications">
 
 
+                <!-- =========================
+                     CERTIFICATION
+                ========================= -->
+
                 <div class="cert-card">
 
-                                        <!-- CERTIFICATION ICON / VISUAL: This is currently a checkmark symbol. You can replace it with a certification logo, badge image, or another icon later. -->
-                    <div class="cert-icon">
-                        ✓
+
+                    <!-- CERTIFICATE IMAGE:
+                         THIS IS WHERE YOUR ACTUAL
+                         CERTIFICATE IMAGE GOES.
+                         
+                         Put the image inside your
+                         images folder. -->
+
+                    <div class="cert-image">
+
+                        <img
+                            src="Project-images/Microsoft Certified Azure Fundamentals.png"
+                            alt="Microsoft Azure Fundamentals AZ-900 Certificate"
+                        >
+
                     </div>
+
+
+                    <!-- CERTIFICATION INFORMATION:
+                         This is the text that appears
+                         next to your certificate. -->
 
                     <div>
 
@@ -1733,6 +1819,12 @@
                             AZ-900 • Microsoft
                         </p>
 
+                        <p class="cert-description">
+                            Foundational knowledge of
+                            Microsoft Azure cloud services,
+                            concepts, and solutions.
+                        </p>
+
                     </div>
 
                 </div>
@@ -1740,28 +1832,115 @@
 
                 <div class="cert-card">
 
-                    <div class="cert-icon">
-                        ✓
+
+                    <!-- CERTIFICATE IMAGE:
+                         Replace the filename with
+                         your second certificate image. -->
+
+                    <div class="cert-image">
+
+                        <img
+                            src="Project-images/Java Focus – 12-Week Immersive Developer Academy (Year Up United  Pluralsight).png"
+                            alt="Java Focus – 12-Week Immersive Developer Academy Certificate"
+                        >
+
                     </div>
+
+
+                    <!-- CERTIFICATION INFORMATION -->
 
                     <div>
 
                         <h3>
-                            Additional Certification
+                            Java Focus 12-Week Immersive Developer Academy
                         </h3>
 
                         <p>
-                            Certification • Issuing Organization
+                            Certificate of Recognition • Year Up United & Pluralsight
+                        </p>
+
+                        <p class="cert-description">
+                            Successfully completed the 12-week Java Focus Immersive Developer Academy
+                            as part of the Spring 2025 Cohort.
                         </p>
 
                     </div>
 
                 </div>
 
+                <div class="cert-card">
+
+
+                    
+                    <div class="cert-image">
+
+                        <img
+                            src="Project-images/HowAI-cert.png"
+                            alt="How AI Works Certificate"
+                        >
+
+                    </div>
+
+
+                    <!-- CERTIFICATION INFORMATION -->
+
+                    <div>
+
+                        <h3>
+                             How AI Works
+                        </h3>
+
+                        <p>
+                            Certificate of Completion • Computer Coach Training Center • May 19, 2026
+                        </p>
+
+                        <p class="cert-description">
+                            Successfully completed instructor-led training for How AI Works.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="cert-card">
+
+
+                    
+                    <div class="cert-image">
+
+                        <img
+                            src="Project-images/YUU Certificate.png"
+                            alt="Year Up United Career Pathways Certificate"
+                        >
+
+                    </div>
+
+
+                    <!-- CERTIFICATION INFORMATION -->
+
+                    <div>
+
+                        <h3>
+                             Year Up United Career
+                        </h3>
+
+                        <p>
+                            Certificate of Completion • Computer Coach Training Center • May 19, 2026
+                        </p>
+
+                        <p class="cert-description">
+                            In recognition of excellence in academic and professional skill development
+                            and becoming career-ready.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </section>
-
 
 
         <!-- =========================
